@@ -1,0 +1,553 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/*
+*
+* Navigation
+*
+*/
+
+.nav-wrapper {
+  height: 56px;
+  background-color: white;
+}
+
+.nav-wrapper nav {
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-wrapper nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-wrapper nav .logo .icon {
+  height: 40px;
+  width: 40px;
+  padding: 8px;
+}
+
+.nav-wrapper nav .logo .icon-logo {
+  height: 56px;
+  width: 120px;
+  padding: 18px 14px 18px 16px;
+  display: flex;
+  position: relative;
+}
+
+.nav-wrapper nav .logo .icon-logo span {
+  margin: 12px 0 0 -10px;
+  font-size: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.nav-wrapper nav .search {
+  display: flex;
+  align-items: center;
+  flex: 0 1 684px;
+  padding: 0 1rem;
+}
+
+@media (max-width: 800px) {
+  .nav-wrapper nav .search {
+    display: none;
+  }
+}
+
+.nav-wrapper nav .search input {
+  border: 1px solid #ccc;
+  height: 40px;
+  border-radius: 2px 0 0 2px;
+  flex: 1;
+  padding: 2px 6px;
+  outline: none;
+  margin-left: 34px;
+  font-size: 16px;
+}
+
+.nav-wrapper nav .search .search-btn {
+  border: 1px solid #ccc;
+  height: 40px;
+  width: 64px;
+  margin-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+  border-radius: 0 2px 2px 0;
+}
+
+.nav-wrapper nav .search .mic {
+  border: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+}
+
+.nav-wrapper nav .search .icon {
+  height: 40px;
+  width: 40px;
+  padding: 8px;
+}
+
+.nav-wrapper nav .menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-wrapper nav .menu .icon {
+  height: 40px;
+  width: 40px;
+  padding: 8px;
+  margin-right: 10px;
+}
+
+@media (max-width: 800px) {
+  .nav-wrapper nav .menu .icon {
+    display: none;
+  }
+}
+
+.nav-wrapper nav .menu .profile {
+  height: 32px;
+  width: 32px;
+  border-radius: 16px;
+  background-color: #f5f5f5;
+  padding: 8px;
+  margin: 0 16px;
+}
+
+/*
+*
+* Wrapper
+*
+*/
+
+.wrapper {
+  background-color: #f9f9f9;
+  height: 150vh;
+}
+
+.wrapper .content {
+  display: grid;
+  grid-template-areas:
+    "main aside"
+    "comments aside";
+  grid-template-columns: 1fr 426px;
+  max-width: 1754px;
+  height: 100vh;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+@media (max-width: 1018px) {
+  .wrapper .content {
+    grid-template-areas:
+      "main"
+      "aside"
+      "comments";
+    grid-template-columns: 1fr;
+  }
+}
+
+/*
+*
+* Main
+*
+*/
+
+main {
+  grid-area: main;
+  padding: 24px 0 0 24px;
+}
+
+main .video-wrapper {
+  background-color: #000000;
+  max-width: 100vw;
+  aspect-ratio: 16 / 9;
+}
+
+@media (max-width: 1018px) {
+  main {
+    padding: 24px 24px 0 24px;
+  }
+
+  main .video-wrapper {
+    width: 100%;
+  }
+}
+
+main .description {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+main .description .tags {
+  display: flex;
+}
+
+main .description .tags p {
+  color: #065fd4;
+  font-size: 12px;
+  margin-right: 0.5rem;
+}
+
+main .description .title h2 {
+  font-weight: 400;
+  line-height: 1.8rem;
+  margin-bottom: 0.8rem;
+  font-size: 18px;
+}
+
+main .description .stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 1200px) {
+  main .description .stats {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 500px) {
+  main .description .stats {
+    display: none;
+  }
+}
+
+main .description .stats .views {
+  font-size: 14px;
+  color: #606060;
+}
+
+@media (max-width: 1200px) {
+  main .description .stats .views {
+    margin-bottom: 0.8rem;
+  }
+}
+
+main .description .stats .action {
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+}
+
+main .description .stats .action .item {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  margin-right: 20px;
+  justify-content: center;
+}
+
+main .description .stats .action .item .icon {
+  height: 24px;
+  width: 24px;
+  margin-right: 4px;
+}
+
+main .description .stats .action .item .value {
+  margin-top: 2px;
+}
+
+main .profile {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  margin-bottom: 20px;
+}
+
+main .profile .profile-pic-wrapper .profile-pic {
+  height: 48px;
+  width: 48px;
+  background-image: url("./ronaldo.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 24px;
+}
+
+main .profile .name-wrapper {
+  flex: 1;
+  padding: 0 1rem;
+  line-height: 1.2rem;
+}
+
+main .profile .name-wrapper .name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+main .profile .name-wrapper .subscribers {
+  font-size: 12px;
+  margin-bottom: 1rem;
+}
+
+main .profile .name-wrapper .show-more {
+  font-size: 12px;
+  color: #606060;
+}
+
+main .profile .subscribe-btn-wrapper button {
+  background-color: #c00;
+  border-radius: 2px;
+  font-weight: 500;
+  font-family: "Roboto";
+  padding: 10px 16px;
+  width: 110px;
+  height: 37px;
+  font-size: 14px;
+  color: #fff;
+  border: 1px solid #c00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+*
+* Aside
+*
+*/
+
+aside {
+  grid-area: aside;
+  padding: 2rem 24px 24px 24px;
+}
+
+aside .chip-wrapper {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+aside .chip-wrapper div {
+  height: 32px;
+  padding: 12px;
+  min-height: 12px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 16px;
+  background-color: #0000000d;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 426px) {
+  aside .chip-wrapper div {
+    font-size: 12px;
+  }
+}
+
+aside .chip-wrapper .selected {
+  background-color: #030303;
+  color: #fff;
+}
+
+aside .recommendation-wrapper {
+  height: 100%;
+}
+
+aside .recommendation-wrapper .recommendation {
+  height: 94px;
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+aside .recommendation-wrapper .recommendation .thumbnail {
+  height: 94px;
+  margin-bottom: 1rem;
+  background-image: url("./swiss.jpg");
+  background-size: cover;
+  width: 168px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  flex-shrink: 0;
+}
+
+@media (max-width: 426px) {
+  aside .recommendation-wrapper .recommendation .thumbnail {
+    height: 94px;
+    margin-bottom: 1rem;
+    background-image: url("./swiss.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    flex-shrink: 1;
+  }
+}
+
+aside .recommendation-wrapper .recommendation .text {
+  padding: 0 10px;
+  width: 100%;
+}
+
+aside .recommendation-wrapper .recommendation .text .title {
+  font-size: 14px;
+  margin-bottom: 4px;
+  font-weight: 500;
+  color: #030303;
+}
+
+@media (max-width: 426px) {
+  aside .recommendation-wrapper .recommendation .text .title {
+    font-size: 12px;
+  }
+
+  aside .recommendation-wrapper .recommendation .text .desc .channel-name {
+    font-size: 10px;
+  }
+
+  aside .recommendation-wrapper .recommendation .text .desc .stats {
+    font-size: 10px;
+  }
+}
+
+aside .recommendation-wrapper .recommendation .text .desc {
+  line-height: 1rem;
+}
+
+aside .recommendation-wrapper .recommendation .text .desc .channel-name {
+  font-size: 12px;
+  color: #606060;
+}
+
+aside .recommendation-wrapper .recommendation .text .desc .stats {
+  font-size: 12px;
+  color: #606060;
+}
+
+/*
+*
+* Comments
+*
+*/
+
+.comments-wrapper {
+  grid-area: comments;
+  padding: 0 0 0 24px;
+}
+
+.comments-wrapper .comments-stats {
+  margin-bottom: 24px;
+}
+
+.comments-wrapper .comments-input {
+  display: flex;
+  margin-bottom: 28px;
+}
+
+.comments-wrapper .comments-input .profile-pic {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  background-image: url("./ronaldo.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.comments-wrapper .comments-input input {
+  flex: 1;
+  margin: 0 1rem;
+  height: 25px;
+  outline: none;
+  font-size: 14px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.comments-wrapper .comments-inner-wrapper .comments {
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.comments-wrapper .comments-inner-wrapper .reply {
+  display: flex;
+  padding-bottom: 20px;
+  margin-left: calc(40px + 1rem);
+}
+
+.comments-wrapper .comments-inner-wrapper .comments .profile-pic {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  background-image: url("./ronaldo.jpeg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.comments-wrapper .comments-inner-wrapper .reply .profile-pic {
+  height: 24px;
+  width: 24px;
+  border-radius: 12px;
+  background-image: url("./ronaldo.jpeg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.comments-wrapper .comments-inner-wrapper .comments .text {
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.comments-wrapper .comments-inner-wrapper .comments .text .name {
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #030303;
+  font-weight: 500;
+}
+
+.comments-wrapper .comments-inner-wrapper .comments .text .name span {
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.comments-wrapper .comments-inner-wrapper .comments .text .comment {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.comments-wrapper .comments-inner-wrapper .comments .text .stats {
+  display: flex;
+}
+
+.comments-wrapper .comments-inner-wrapper .comments .text .stats .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.comments-wrapper .comments-inner-wrapper .comments .text .stats .item .icon {
+  height: 32px;
+  width: 32px;
+  padding: 8px;
+}
